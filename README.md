@@ -30,6 +30,7 @@ So use with care!
 - Writes artists and Thumbnails to mp3s (when using default config parameter)
 - Deletes all files that are older than specified in the config
 - Completeley databess less
+- Responsive design to use it on your phone!
 
 # Installation
 
