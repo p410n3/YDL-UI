@@ -18,7 +18,7 @@ youtube-dl supports all this, but all the UIs I found werent really my taste. So
 - Download whole channels, playlists, trackstations etc. (And MANY other sites are supported as well for example soundcloud)
 - Writes artists and Thumbnails to mp3s (when using default config parameter)
 - Deletes all files that are older than specified in the config
-- Completeley databess less
+- Completeley database less
 - Responsive design to use it on your phone!
 
 # Idea of this Project
