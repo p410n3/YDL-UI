@@ -28,7 +28,8 @@ So use with care!
 - configuration variables are all stored in an config.php
 - Download whole channels, playlists, trackstations etc. (And MANY other sites are supported as well for example soundcloud)
 - Writes artists and Thumbnails to mp3s (when using default config parameter)
-- Deletes all 
+- Deletes all files that are older than specified in the config
+- Completeley databess less
 
 # Installation
 
