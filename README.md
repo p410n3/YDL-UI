@@ -37,7 +37,7 @@ You need:
 - Webserver with PHP
 - The command ```popen ``` cant be blacklisted (Apache does this by default IIRC)
 
-1. Download the release
+1. Download the release (**PLEASE do download from there. The master branch might contain critical bugs!**)
 2. Unzip it and upload to your webdirectory
 3. Make sure to make the owner of the folder to your webservers user (e.g. apache or www-data) and set permissions as 775
     - You can use either CHOWN and CHMOD [READ MORE HERE](https://www.cyberciti.biz/faq/how-to-use-chmod-and-chown-command/)
