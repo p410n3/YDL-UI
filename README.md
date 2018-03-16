@@ -11,6 +11,16 @@ I made this because most public downloaders either:
 
 youtube-dl supports all this, but all the UIs I found werent really my taste. So I made my own.
 
+# Features
+- Make multiple users
+- Log every (succesful) download in the log.php
+- configuration variables are all stored in an config.php
+- Download whole channels, playlists, trackstations etc. (And MANY other sites are supported as well for example soundcloud)
+- Writes artists and Thumbnails to mp3s (when using default config parameter)
+- Deletes all files that are older than specified in the config
+- Completeley databess less
+- Responsive design to use it on your phone!
+
 # Idea of this Project
 
 This downloader is meant to be used as a selfhosted and private Service. It was designed with this in mind and DOES not scale well. 
@@ -21,16 +31,6 @@ Its not to be released publicly, as this will probably just flood your Harddrive
 - Its easy to just spam forms and basically flood your server.
 
 So use with care!
-
-# Features
-- Make multiple users
-- Log every (succesful) download in the log.php
-- configuration variables are all stored in an config.php
-- Download whole channels, playlists, trackstations etc. (And MANY other sites are supported as well for example soundcloud)
-- Writes artists and Thumbnails to mp3s (when using default config parameter)
-- Deletes all files that are older than specified in the config
-- Completeley databess less
-- Responsive design to use it on your phone!
 
 # Installation
 
