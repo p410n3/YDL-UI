@@ -35,8 +35,17 @@ So use with care!
 # Installation
 
 You need:
-- Webserver with PHP
+- Linux / Unix Webserver with PHP (windows not tested)
 - The command ```popen ``` cant be blacklisted (Apache does this by default IIRC)
+- youtube-dl installed:
+    ```
+    sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+    sudo chmod a+rx /usr/local/bin/youtube-dl
+    ```
+- ffmpeg installed to download mp3 files 
+    ``` 
+        sudo apt install ffmpeg
+    ```
 
 1. Download the release (**PLEASE do download from there. The master branch might contain critical bugs!**)
 2. Unzip it and upload to your webdirectory
