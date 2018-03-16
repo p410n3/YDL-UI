@@ -1,16 +1,25 @@
-# Youtube-dl-PHP-GUI
+# YDL-UI
 
-![image](https://i.imgur.com/PqBRRHg.png)
+Minimalistic, portable and selfhosted Interface for the famous [youtube-dl](https://rg3.github.io/youtube-dl/) CLI tool.
 
-Simple GUI writen in HTML/CSS (Bootstrap) and PHP.
-No python or annoying dependency management. Install youtube-dl via apt and unzip the UI to yout htdocs!
+I made this because most public downloaders either:
+- Have adblock bypasses, coinhive scripts or PRO plans you have to buy,
+- Dont put thumbnails and meta data in the file, 
+- Dont support downloading playlists.
+
+youtube-dl supports all this, but all the UIs I found werent really my taste. So I made my own.
+
+# Ideology of this Project
+
+This downloader is meant to be used as a selfhosted and private Service. It was designed with this in mind and DOES not scale well. 
+Its not to be released publicly, as this will probably just flood your Harddrive. It was meant to be shared and used by you and some friends you trust. To explain further, its because of these functionalitys:
+
+- Files are deleted based on how old they are. Filesize doesnt matter!
+- There is no Downlaod limit
+- Its easy to just spam forms and basically flood your server.
+
+So use with care!
 
 # Installation
 
-That is pretty straight forward. Just install youtube-dl and make it so it can be globally run using the command "youtube-dl".
-The easiest way to do this is by using `apt install youtube-dl`.
-After that just put the contents of the .ZIP file somewhere on your Webserver Directory.
-
-Thats all!
-	
-# Known bug: RRMDIR tries to delete the JS and the CSS folder. Will fix today!
+[... to be continued ...]
