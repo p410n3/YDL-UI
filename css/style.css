@@ -1,0 +1,107 @@
+/* Keep in mind: Mobile first*/
+html {
+    font-size: 16px;
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+body {
+    color: #444 !important;
+    background-color: #eeeeee !important;
+}
+
+.content {
+    position: absolute;
+    margin-top: 80px;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.content input{
+    margin-right: 5px;
+}
+
+.form {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form select {
+    margin-top: 5px;
+    max-width: 20%;
+    min-width: 110px;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login form input{
+    margin: 2px;
+}
+
+.login form .btn{
+    max-width: 50%;
+}
+/** The CSS for the PHP file **/
+.dl-page {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.popen {
+    max-width: 700px;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.popen p {
+    margin: 0 !important;
+}
+
+@media (min-width: 480px) {
+    .form {
+        width: 60%;
+        max-width: 600px;
+    }
+
+    .form form {
+        flex-wrap: nowrap;
+    }
+
+    .url {
+        min-width: 0;
+    }
+}
+
+.card {
+    margin: 5px !important;
+    width: 95vw !important;
+    max-width: 600px !important;
+
+    border: 1px solid rgba(0, 0, 0, .25) !important;
+}
