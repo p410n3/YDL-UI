@@ -1,5 +1,5 @@
 <?php
-//The dfault password is "password"
+//The default password is "password"
 $authArray = array(
     "user1"=>"5f4dcc3b5aa765d61d8327deb882cf99",
     "user2"=>"5f4dcc3b5aa765d61d8327deb882cf99",
