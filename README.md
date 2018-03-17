@@ -53,6 +53,7 @@ You need:
     - You can use either CHOWN and CHMOD [READ MORE HERE](https://www.cyberciti.biz/faq/how-to-use-chmod-and-chown-command/)
     - Or use an FTP client such as winSCP [example](https://i.imgur.com/lbyK2Gy.png)
 4. navigate to the config.php and configure to your likings. (For md5 hashes I use http://www.md5.cz/)
+5. Default password is "password"
 
 # Questions?
 
