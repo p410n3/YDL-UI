@@ -1,5 +1,5 @@
 <?php
-//md5 hash of "password"
+//The dfault password is "password"
 $authArray = array(
     "user1"=>"5f4dcc3b5aa765d61d8327deb882cf99",
     "user2"=>"5f4dcc3b5aa765d61d8327deb882cf99",
