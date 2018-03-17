@@ -32,7 +32,7 @@ verifyLogin();
     </div>
 
     <a href="https://rg3.github.io/youtube-dl/supportedsites.html">Supported Sites to Download from</a>
-    <a href="https://github.com/p410n3/Youtube-dl-PHP-GUI">This project on Github</a>
+    <a href="https://github.com/p410n3/YDL-UI">This project on Github</a>
 </div>
 </body>
 
