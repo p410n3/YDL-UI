@@ -10,7 +10,29 @@ include 'php/liveExec.php';
 include 'config.php';
 
 if (isset($_POST['url'])) {
-    rmOldDir($hours);
+
+    $whiteListedFolders = array(
+        ".",
+        "..",
+        "css",
+        "php",
+    );
+
+    //Deletes all old Directories older than $hours in the config
+    if ($handle = opendir('./')) {
+        while (false !== ($dir = readdir($handle))) {
+            //These folders will not be deleted when space is freed. IMPORTANT!
+            if (in_array($dir, $whiteListedFolders)) continue;
+            if (is_dir($dir)) {
+                if ($hours != 0 && ((time() - filemtime($dir)) > ($hours * (60 * 60)))) {
+                    rrmdir($dir);
+                }
+            }
+        }
+        closedir($handle);
+    }
+
+
     //Make an folder with md5(date()) to download the stuff there
     $md5_date = md5(date("Y-m-d H:i:s"));
     mkdir($md5_date);
@@ -27,7 +49,7 @@ if (isset($_POST['url'])) {
         }
     }
 
-    //Prpare the command
+    //Prepare the command
     $cmd = "youtube-dl " . escapeshellarg($_POST['url']) . $fileFormat . $additionalParams;    //fileFormat does not need to be escaped, its no user input
 }
 ?>

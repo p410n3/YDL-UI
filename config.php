@@ -5,12 +5,6 @@ $authArray = array(
     "user2"=>"5f4dcc3b5aa765d61d8327deb882cf99",
 );
 
-//These folders will not be deleted when space is freed. IMPORTANT!
-$whiteListedFolders = array(
-    "css",
-    "php",
-);
-
 //Delete old folders after x hours
 $hours = 0.5; // 0 to disable
 
