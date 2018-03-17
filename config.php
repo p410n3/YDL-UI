@@ -7,7 +7,6 @@ $authArray = array(
 
 //These folders will not be deleted when space is freed. IMPORTANT!
 $whiteListedFolders = array(
-    "js",
     "css",
     "php",
 );
