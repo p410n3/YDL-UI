@@ -1,5 +1,5 @@
 <?php
-include "php/verification.php";
+include "verification.php";
 verifyLogin();
 ?>
 
