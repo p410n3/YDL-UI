@@ -34,7 +34,24 @@ verifyLogin();
 
     <a href="https://rg3.github.io/youtube-dl/supportedsites.html">Supported Sites to Download from</a>
     <a href="https://github.com/p410n3/YDL-UI">This project on Github</a>
+
+    <div class="sk-circle hidden" id="loading">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+    </div>
 </div>
+
+<script src="js/script.js"></script>
 </body>
 
 </html>

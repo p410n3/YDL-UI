@@ -2,6 +2,11 @@
 include "php/verification.php";
 verifyLogin();
 
+ignore_user_abort(true);
+set_time_limit(0);
+
+flush();
+
 //Include files here
 include 'php/foldersize.php';
 include 'php/rrmdir.php';
@@ -16,6 +21,7 @@ if (isset($_POST['url'])) {
         "..",
         "css",
         "php",
+        "js",
     );
 
     //Deletes all old Directories older than $hours in the config
@@ -51,41 +57,21 @@ if (isset($_POST['url'])) {
 
     //Prepare the command
     $cmd = "youtube-dl " . escapeshellarg($_POST['url']) . $fileFormat . $additionalParams;    //fileFormat does not need to be escaped, its no user input
+    //Inconsistent across PHP versions // webserver, switching to exec until I find a fix
+    //liveExec($cmd);
+
+    exec($cmd);
+
+    //writes the log
+    $logFileName = "log.php";
+    chdir("../");
+    $data = $_SESSION['user'] . " initiated download for: " . $_POST["url"] .
+        " at " . date("d-m-Y h:i:sa") . " as " . $_POST["fileFormat"] .
+        ". File size: " . (folderSize($md5_date) / 1000000) . "mb";
+
+    $log = file_put_contents($logFileName, $data . PHP_EOL, FILE_APPEND | LOCK_EX);
+
+    echo '<script>window.location = "dl.php?folder=' . $md5_date . '"</script>';
+    echo '<p><a href="dl.php?folder=' . $md5_date . '">DOWNLOAD HERE</a></p>';
+
 }
-?>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>YDL-UI</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-          crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-<div class="content">
-    <h2>Downloading...</h2>
-    <br />
-    <div class="popen">
-        <?php
-            liveExec($cmd);
-
-            //writes the log
-            $logFileName = "log.php";
-            chdir("../");
-            $data = $_SESSION['user'] . " initiated download for: " . $_POST["url"] .
-                " at " . date("d-m-Y h:i:sa") . " as " . $_POST["fileFormat"] .
-                ". File size: " . (folderSize($md5_date) / 1000000) . "mb";
-
-            $log = file_put_contents($logFileName, $data.PHP_EOL , FILE_APPEND | LOCK_EX);
-
-            echo '<script>window.location = "dl.php?folder=' . $md5_date . '"</script>';
-            echo '<a href="dl.php?folder=' . $md5_date . '">DOWNLOAD HERE</a>';
-        ?>
-    </div>
-</body>
-
-</html>
