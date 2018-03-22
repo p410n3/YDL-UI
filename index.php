@@ -33,7 +33,7 @@ verifyLogin();
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="zip" name="zip">
                 <label class="form-check-label" for="zip">Download as .zip file?</label>
-            </div>k
+            </div>
             <a data-toggle="collapse" href="#expertDiv" role="button" aria-expanded="false" aria-controls="expertDiv">
                 Enable expert Options
             </a>
