@@ -2,7 +2,7 @@
 
 Minimalistic, portable and selfhosted Interface for the famous [youtube-dl](https://rg3.github.io/youtube-dl/) CLI tool.
 
-![GIF](https://i.imgur.com/D5aPYhH.gif)
+![GIF](https://i.imgur.com/f3uKMON.gif)
 
 I made this because most public downloaders either:
 - Have adblock bypasses, coinhive scripts or PRO plans you have to buy,
@@ -36,7 +36,7 @@ So use with care!
 
 You need:
 - Linux / Unix Webserver with PHP (windows not tested)
-- The command ```popen ``` cant be blacklisted (Apache does this by default IIRC)
+- The command ~~popen~~ ``` exec ``` cant be blacklisted (Apache does this by default IIRC)
 - youtube-dl installed:
     ```
     sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
