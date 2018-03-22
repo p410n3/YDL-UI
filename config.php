@@ -11,5 +11,5 @@ $hours = 0.5; // 0 to disable
 //timezone
 date_default_timezone_set('Europe/Berlin');
 
-//adding these ALWAYS to the end of the youtube-dl command
+//adding these to the end of the youtube-dl command
 $additionalParams = " --no-progress --no-warnings --embed-thumbnail --add-metadata";
