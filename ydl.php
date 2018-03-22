@@ -32,7 +32,6 @@ if (isset($_POST['url'])) {
         closedir($handle);
     }
 
-
     //Make an folder with md5(date()) to download the stuff there
     $md5_date = md5(date("Y-m-d H:i:s"));
     mkdir($md5_date);
@@ -41,7 +40,7 @@ if (isset($_POST['url'])) {
     //Check what fileFormat the user chose
     if (isset($_POST['fileFormat'])) {
         if ($_POST['fileFormat'] == "mp3") {
-            $fileFormat = ' --extract-audio --audio-format mp3 -f "bestaudio"';
+            $fileFormat = ' --extract-audio --audio-format mp3 -f "bestaudio" ';
         }
 
         if ($_POST['fileFormat'] == "video") {
@@ -49,8 +48,24 @@ if (isset($_POST['url'])) {
         }
     }
 
+    //if user want to zip, store it in the session for the dl.php
+    if (isset($_POST['zip'])) {
+        if ($_POST['zip']) {
+            $_SESSION['zip'] = true;
+        } else {
+            $_SESSION['zip'] = true; //if this isn't reverted, it might be zipped without the user wanting it
+        }
+    }
+
+    //expert Settings
+    $expertParams = " ";
+
+    if (isset($_POST['expertParams'])) {
+        $expertParams = $_POST['expertParams'];
+    }
+
     //Prepare the command
-    $cmd = "youtube-dl " . escapeshellarg($_POST['url']) . $fileFormat . $additionalParams;    //fileFormat does not need to be escaped, its no user input
+    $cmd = "youtube-dl " . escapeshellarg($_POST['url']) . $fileFormat . $expertParams . $additionalParams;    //fileFormat does not need to be escaped, its no user input
 }
 ?>
 
@@ -71,7 +86,7 @@ if (isset($_POST['url'])) {
     <br />
     <div class="popen">
         <?php
-            liveExec($cmd);
+            //liveExec($cmd);
 
             //writes the log
             $logFileName = "log.php";
