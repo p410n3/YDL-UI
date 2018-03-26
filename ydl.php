@@ -2,11 +2,6 @@
 include "php/verification.php";
 verifyLogin();
 
-ignore_user_abort(true);
-set_time_limit(0);
-
-flush();
-
 //Include files here
 include 'php/foldersize.php';
 include 'php/rrmdir.php';
@@ -70,8 +65,6 @@ if (isset($_POST['url'])) {
         ". File size: " . (folderSize($md5_date) / 1000000) . "mb";
 
     $log = file_put_contents($logFileName, $data . PHP_EOL, FILE_APPEND | LOCK_EX);
-
-    echo '<script>window.location = "dl.php?folder=' . $md5_date . '"</script>';
-    echo '<p><a href="dl.php?folder=' . $md5_date . '">DOWNLOAD HERE</a></p>';
-
+    
+    header('Location: ./dl.php?folder=' . $md5_date);
 }
