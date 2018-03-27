@@ -5,7 +5,6 @@ verifyLogin();
 //Include files here
 include 'php/foldersize.php';
 include 'php/rrmdir.php';
-include 'php/rmOld.php';
 include 'php/liveExec.php';
 include 'config.php';
 
