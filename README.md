@@ -19,6 +19,7 @@ youtube-dl supports all this, but all the UIs I found werent really my taste. So
 - Writes artists and Thumbnails to mp3s (when using default config parameter)
 - Deletes all files that are older than specified in the config
 - Completeley database less
+- Pass CLI arguments through the Interface [example](https://i.imgur.com/Ax1xTNl.png) (dont worry its escaped :D)
 - Responsive design to use it on your phone!
 
 # Idea of this Project
