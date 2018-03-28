@@ -32,7 +32,6 @@ if (isset($_POST['url'])) {
         closedir($handle);
     }
 
-
     //Make an folder with md5(date()) to download the stuff there
     $md5_date = md5(date("Y-m-d H:i:s"));
     mkdir($md5_date);
@@ -55,11 +54,25 @@ if (isset($_POST['url'])) {
     }
 
     //Prepare the command
-    $cmd = "youtube-dl " . escapeshellarg($_POST['url']) . " " . $fileFormat . " " .  $additionalParams . " " .$expertOptions;    //fileFormat does not need to be escaped, its no user input
-    //Inconsistent across PHP versions // webserver, switching to exec until I find a fix
-    //liveExec($cmd);
+    try {
+        $cmd = "youtube-dl" . " " .
+            escapeshellcmd ($_POST['url']) . " " .
+            $fileFormat . " " .
+            $additionalParams . " " .
+            escapeshellcmd ($expertOptions);
 
-    exec($cmd);
+        exec($cmd);
+
+    } catch (Exception $e) {
+        $cmd = "youtube-dl" . " " .
+            escapeshellcmd ($_POST['url']) . " " .
+            $fileFormat . " " .
+            $additionalParams;
+
+        exec($cmd);
+    }
+
+    //liveExec($cmd); //Inconsistent across PHP versions / webserver, switching to exec until I find a fix
 
     //writes the log
     $logFileName = "log.php";
