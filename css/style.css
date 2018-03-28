@@ -76,7 +76,7 @@ body {
     width: 80%;
 
     display: flex;
-    /*flex-direction: column-reverse;*/
+    flex-direction: column-reverse;
 }
 
 .popen p {
@@ -234,4 +234,16 @@ body {
           -webkit-transform: scale(1);
           transform: scale(1);
       }
+}
+
+.expertOptions {
+    max-width: 70%;
+}
+
+.arrowNotClicked {
+    transform: rotate(-90deg);
+}
+
+.arrowClicked {
+    transform: rotate(0deg);
 }

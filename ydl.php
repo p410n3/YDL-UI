@@ -41,7 +41,7 @@ if (isset($_POST['url'])) {
     //Check what fileFormat the user chose
     if (isset($_POST['fileFormat'])) {
         if ($_POST['fileFormat'] == "mp3") {
-            $fileFormat = ' --extract-audio --audio-format mp3 -f "bestaudio"';
+            $fileFormat = '--extract-audio --audio-format mp3 -f "bestaudio"';
         }
 
         if ($_POST['fileFormat'] == "video") {
@@ -49,8 +49,13 @@ if (isset($_POST['url'])) {
         }
     }
 
+    $expertOptions = "";
+    if (isset($_POST['expertParams'])) {
+        $expertOptions = $_POST['expertParams'];
+    }
+
     //Prepare the command
-    $cmd = "youtube-dl " . escapeshellarg($_POST['url']) . $fileFormat . $additionalParams;    //fileFormat does not need to be escaped, its no user input
+    $cmd = "youtube-dl " . escapeshellarg($_POST['url']) . " " . $fileFormat . " " .  $additionalParams . " " .$expertOptions;    //fileFormat does not need to be escaped, its no user input
     //Inconsistent across PHP versions // webserver, switching to exec until I find a fix
     //liveExec($cmd);
 

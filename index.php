@@ -33,21 +33,38 @@ verifyLogin();
                     <option value="video">Video</option>
                 </select>
             </div>
-            <div class="form-check">
+            <!--div class="form-check">
                 <input type="checkbox" class="form-check-input" id="zip" name="zip">
                 <label class="form-check-label" for="zip">Download as .zip file?</label>
-            </div>
-            <a data-toggle="collapse" href="#expertDiv" role="button" aria-expanded="false" aria-controls="expertDiv">
-                Enable expert Options &nbsp; <i class="fas fa-angle-down"></i>
+            </div -->
+            <a data-toggle="collapse" href="#expert" role="button" aria-expanded="false" aria-controls="expertDiv" id="expertDiv">
+                Expert Options &nbsp; <i class="fas fa-angle-down arrowNotClicked" id="arrow"></i>
             </a>
-            <div class="form-group collapse expertOptions" id="expertDiv">
-                <input type="text" class="form-control" id="expert" placeholder="Expert Options" name="expertParams">
+            <div class="form-group collapse expertOptions" id="expert">
+                <input type="text" class="form-control" id="expert"
+                       placeholder="CLI arguments for Youtube-DL"
+                       name="expertParams">
             </div>
         </form>
     </div>
 
     <a href="https://rg3.github.io/youtube-dl/supportedsites.html">Supported Sites to Download from</a>
     <a href="https://github.com/p410n3/YDL-UI">This project on Github</a>
+
+    <div class="sk-circle hidden" id="loading">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+    </div>
 </div>
 
 <!-- Latest compiled and minified JavaScript fo bootstrap -->
@@ -60,6 +77,7 @@ verifyLogin();
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>
