@@ -55,7 +55,7 @@ if (isset($_POST['url'])) {
 
     //Prepare the command
     try {
-        $cmd = "youtube-dl" . " " .
+        $cmd = "LANG=C.UTF-8 youtube-dl" . " " .
             escapeshellcmd ($_POST['url']) . " " .
             $fileFormat . " " .
             $additionalParams . " " .
@@ -64,7 +64,7 @@ if (isset($_POST['url'])) {
         exec($cmd);
 
     } catch (Exception $e) {
-        $cmd = "youtube-dl" . " " .
+        $cmd = "LANG=C.UTF-8 youtube-dl" . " " .
             escapeshellcmd ($_POST['url']) . " " .
             $fileFormat . " " .
             $additionalParams;
