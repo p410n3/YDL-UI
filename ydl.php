@@ -55,19 +55,19 @@ if (isset($_POST['url'])) {
 
     //Prepare the command
     try {
-        $cmd = "youtube-dl" . " " .
+        $cmd = "LANG=C.UTF-8 youtube-dl" . " " .
             escapeshellcmd ($_POST['url']) . " " .
             $fileFormat . " " .
-            $additionalParams . " " .
+            escapeshellcmd($additionalParams) . " " .
             escapeshellcmd ($expertOptions);
 
         exec($cmd);
 
     } catch (Exception $e) {
-        $cmd = "youtube-dl" . " " .
+        $cmd = "LANG=C.UTF-8 youtube-dl" . " " .
             escapeshellcmd ($_POST['url']) . " " .
             $fileFormat . " " .
-            $additionalParams;
+            escapeshellcmd($additionalParams);
 
         exec($cmd);
     }
