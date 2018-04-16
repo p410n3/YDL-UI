@@ -33,6 +33,12 @@ Its not to be released publicly, as this will probably just flood your Harddrive
 
 So use with care!
 
+# Todo
+
+Before the next big update drops (v1.5) I have following things on my todo list:
+- A fully working progress bar
+- Download as .zip
+
 # Installation
 
 You need:
