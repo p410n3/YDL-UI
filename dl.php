@@ -19,11 +19,21 @@ verifyLogin();
     <br />
 
     <?php
-
     include 'php/loopAndPrint.php';
 
     if (isset($_GET['folder'])) {
-        chdir($_GET['folder']);
+
+        //check if the folder is an md5 value, if not abort
+        if (!preg_match('/^[a-f0-9]{32}$/', $_GET['folder'])) {
+            die('Unexpected Input...');
+        };
+
+        if (file_exists($_GET['folder'])) {
+            chdir($_GET['folder']);
+        } else {
+            die('Folder does not exist...');
+        }
+
         //That shows the cards
         loopAndPrint();
     }
