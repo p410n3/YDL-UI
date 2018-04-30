@@ -18,6 +18,23 @@ verifyLogin();
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">YDL-UI</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item ">
+                <a class="nav-link" href="https://rg3.github.io/youtube-dl/supportedsites.html">Supported sites</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/p410n3/YDL-UI">Source</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <div class="content">
     <h2>YDL-UI</h2>
 
@@ -37,19 +54,16 @@ verifyLogin();
                 <input type="checkbox" class="form-check-input" id="zip" name="zip">
                 <label class="form-check-label" for="zip">Download as .zip file?</label>
             </div -->
-            <a data-toggle="collapse" href="#expert" role="button" aria-expanded="false" aria-controls="expertDiv" id="expertDiv">
+            <a href="#expert" id="expertDiv">
                 Expert Options &nbsp; <i class="fas fa-angle-down arrowNotClicked" id="arrow"></i>
             </a>
-            <div class="form-group collapse expertOptions" id="expert">
+            <div class="form-group collapse expertOptions" id="expert-div">
                 <input type="text" class="form-control" id="expert"
                        placeholder="CLI arguments for Youtube-DL"
                        name="expertParams">
             </div>
         </form>
     </div>
-
-    <a href="https://rg3.github.io/youtube-dl/supportedsites.html">Supported Sites to Download from</a>
-    <a href="https://github.com/p410n3/YDL-UI">This project on Github</a>
 
     <div class="sk-circle hidden" id="loading">
         <div class="sk-circle1 sk-child"></div>
@@ -65,6 +79,7 @@ verifyLogin();
         <div class="sk-circle11 sk-child"></div>
         <div class="sk-circle12 sk-child"></div>
     </div>
+
 </div>
 
 <!-- Latest compiled and minified JavaScript fo bootstrap -->

@@ -12,4 +12,7 @@ $hours = 0.5; // 0 to disable
 date_default_timezone_set('Europe/Berlin');
 
 //ALWAYS adding these to the end of the youtube-dl command, for user input arguments use the expert options
-$additionalParams = "--no-progress --no-warnings --embed-thumbnail --add-metadata";
+$additionalParams = " --no-warnings --embed-thumbnail --add-metadata";
+
+//This will stream the shell output to the Frontend. If problems occur set to false
+$liveExec = false;

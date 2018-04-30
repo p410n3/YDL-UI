@@ -1,7 +1,7 @@
 <?php
-//executes the commmand that it was given and live outouts it to the FE
+//executes the command that it was given and live outputs it to the FE
 function liveExec($cmd) {
-    while (@ ob_end_flush());
+    @ ob_end_flush();
 
     $proc = popen($cmd, 'r');
     while (!feof($proc))

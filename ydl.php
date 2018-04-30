@@ -1,3 +1,19 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        downloading...
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="content">
+    <div class="popen">
+
 <?php
 include "php/verification.php";
 verifyLogin();
@@ -54,25 +70,20 @@ if (isset($_POST['url'])) {
     }
 
     //Prepare the command
-    try {
-        $cmd = "LANG=C.UTF-8 youtube-dl" . " " .
-            escapeshellcmd ($_POST['url']) . " " .
-            $fileFormat . " " .
-            escapeshellcmd($additionalParams) . " " .
-            escapeshellcmd ($expertOptions);
+    $cmd = "LANG=C.UTF-8 youtube-dl" . " " .
+        escapeshellcmd($_POST['url']) . " " .
+        $fileFormat . " " .
+        escapeshellcmd($additionalParams) . " " .
+        escapeshellcmd($expertOptions);
 
-        exec($cmd);
+    if ($liveExec) {
+        liveExec($cmd); //Inconsistent across PHP versions / Web servers it seems
+        echo '<script>window.location = "dl.php?folder=' . $md5_date . '"</script>';
+        echo '<h3>If your browser doesn\'t automatically redirects you,  <a href="./dl.php?folder=' . $md5_date . '" ' . '> click here </a></h3>';
 
-    } catch (Exception $e) {
-        $cmd = "LANG=C.UTF-8 youtube-dl" . " " .
-            escapeshellcmd ($_POST['url']) . " " .
-            $fileFormat . " " .
-            escapeshellcmd($additionalParams);
-
+    } else {
         exec($cmd);
     }
-
-    //liveExec($cmd); //Inconsistent across PHP versions / webserver, switching to exec until I find a fix
 
     //writes the log
     $logFileName = "log.php";
@@ -82,6 +93,13 @@ if (isset($_POST['url'])) {
         ". File size: " . (folderSize($md5_date) / 1000000) . "mb";
 
     $log = file_put_contents($logFileName, $data . PHP_EOL, FILE_APPEND | LOCK_EX);
-    
-    header('Location: ./dl.php?folder=' . $md5_date);
+
+    if ($liveExec) {
+        header('Location: ./dl.php?folder=' . $md5_date);
+    }
 }
+?>
+        </div>
+    </div>
+</body>
+</html>
