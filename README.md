@@ -36,8 +36,11 @@ So use with care!
 # Todo
 
 Before the next big update drops (v1.5) I have following things on my todo list:
-- A fully working progress bar
+- ~~A fully working progress bar~~ substituded with liveExec() ✔ done
 - Download as .zip
+- More specific file types
+- FE fixes and navbar ✔ done
+- better password hashing
 
 # Installation
 
