@@ -36,14 +36,17 @@ So use with care!
 # Todo
 
 Before the next big update drops (v1.5) I have following things on my todo list:
-- A fully working progress bar
+- ~~A fully working progress bar~~ substituded with liveExec() ✔ done
 - Download as .zip
+- More specific file types
+- FE fixes and navbar ✔ done
+- better password hashing
 
 # Installation
 
 You need:
 - Linux / Unix Webserver with PHP (windows not tested)
-- The command ~~popen~~ ``` exec ``` cant be blacklisted (Apache does this by default IIRC)
+- The command ```popen``` and / or ``` exec ``` cant be blacklisted (Apache does this by default IIRC)
 - youtube-dl installed:
     ```
     sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
