@@ -78,9 +78,6 @@ if (isset($_POST['url'])) {
 
     if ($liveExec) {
         liveExec($cmd); //Inconsistent across PHP versions / Web servers it seems
-        echo '<script>window.location = "dl.php?folder=' . $md5_date . '"</script>';
-        echo '<h3>If your browser doesn\'t automatically redirects you,  <a href="./dl.php?folder=' . $md5_date . '" ' . '> click here </a></h3>';
-
     } else {
         exec($cmd);
     }
@@ -95,6 +92,9 @@ if (isset($_POST['url'])) {
     $log = file_put_contents($logFileName, $data . PHP_EOL, FILE_APPEND | LOCK_EX);
 
     if ($liveExec) {
+        echo '<script>window.location = "dl.php?folder=' . $md5_date . '"</script>'; //fight me devrant
+        echo '<h3>If your browser doesn\'t automatically redirects you,  <a href="./dl.php?folder=' . $md5_date . '" ' . '> click here </a></h3>';
+    } else {
         header('Location: ./dl.php?folder=' . $md5_date);
     }
 }
