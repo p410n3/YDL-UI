@@ -1,3 +1,5 @@
+
+
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,15 +14,19 @@
 <body>
 
 <div class="content">
-    <h2>Authentication needed</h2>
-    <div class="login">
-        <form action="login.php" method="post" class="inline">
-            <input type="text" class="form-control" name="user" placeholder="username">
+    <h2>Generate Password Hash</h2>
+    <div class="row passform">
+        <form action="<?php $_SERVER["SCRIPT_FILENAME"] ?>" method="post">
             <input type="password" class="form-control" name="pass" placeholder="password">
-            <input type="submit" class="btn btn-primary dl-btn" value="Login">
+            <input type="submit" class="btn btn-primary dl-btn" value="Generate Hash">
         </form>
     </div>
-    <p>Generate Password hashes <a href="password.php">HERE</a></p>
+
+    <?php
+        if (isset($_POST['pass'])) {
+            echo password_hash($_POST['pass'], PASSWORD_DEFAULT);
+        }
+    ?>
 </div>
 
 

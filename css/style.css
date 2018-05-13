@@ -62,6 +62,11 @@ body {
 .login form .btn{
     max-width: 50%;
 }
+
+.passform input {
+    margin-bottom: 5px;
+}
+
 /** The CSS for the PHP file **/
 .dl-page {
     font-size: 20px;
