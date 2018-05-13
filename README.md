@@ -62,7 +62,7 @@ You need:
 3. Make sure to make the owner of the folder to your webservers user (e.g. apache or www-data) and set permissions as 775
     - You can use either CHOWN and CHMOD [READ MORE HERE](https://www.cyberciti.biz/faq/how-to-use-chmod-and-chown-command/)
     - Or use an FTP client such as winSCP [example](https://i.imgur.com/lbyK2Gy.png)
-4. navigate to the config.php and configure to your likings. (For md5 hashes I use http://www.md5.cz/)
+4. navigate to the config.php and configure to your likings. To generate password hashes use the password.php
 5. Default password is "password"
 
 # Questions?
