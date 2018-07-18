@@ -40,7 +40,7 @@ Before the next big update drops (v1.5) I have following things on my todo list:
 - Download as .zip
 - More specific file types
 - FE fixes and navbar ✔ done
-- better password hashing
+- better password hashing ✔ done
 
 # Installation
 
