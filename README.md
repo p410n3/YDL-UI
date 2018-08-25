@@ -13,7 +13,7 @@ youtube-dl supports all this, but all the UIs I found werent really my taste. So
 
 # Features
 - Make multiple users
-- Log every (succesful) download in the log.php
+- Log every (successful) download in the log.php
 - configuration variables are all stored in an config.php
 - Download whole channels, playlists, trackstations etc. (And MANY other sites are supported as well for example soundcloud)
 - Writes artists and Thumbnails to mp3s (when using default config parameter)
