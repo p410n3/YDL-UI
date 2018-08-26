@@ -6,14 +6,14 @@ Minimalistic, portable and selfhosted Interface for the famous [youtube-dl](http
 
 I made this because most public downloaders either:
 - Have adblock bypasses, coinhive scripts or PRO plans you have to buy,
-- Dont put thumbnails and meta data in the file, 
+- Dont put thumbnails and meta data in the file,
 - Dont support downloading playlists.
 
 youtube-dl supports all this, but all the UIs I found werent really my taste. So I made my own.
 
 # Features
 - Make multiple users
-- Log every (succesful) download in the log.php
+- Log every (successful) download in the log.php
 - configuration variables are all stored in an config.php
 - Download whole channels, playlists, trackstations etc. (And MANY other sites are supported as well for example soundcloud)
 - Writes artists and Thumbnails to mp3s (when using default config parameter)
@@ -24,11 +24,11 @@ youtube-dl supports all this, but all the UIs I found werent really my taste. So
 
 # Idea of this Project
 
-This downloader is meant to be used as a selfhosted and private Service. It was designed with this in mind and DOES not scale well. 
+This downloader is meant to be used as a selfhosted and private Service. It was designed with this in mind and DOES not scale well.
 Its not to be released publicly, as this will probably just flood your Harddrive. It was meant to be shared and used by you and some friends you trust. To explain further, its because of these functionalitys:
 
 - Files are deleted based on how old they are. Filesize doesnt matter!
-- There is no Downlaod limit
+- There is no Download limit
 - Its easy to just spam forms and basically flood your server.
 
 So use with care!
@@ -52,8 +52,8 @@ You need:
     sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
     sudo chmod a+rx /usr/local/bin/youtube-dl
     ```
-- ffmpeg installed to download mp3 files 
-    ``` 
+- ffmpeg installed to download mp3 files
+    ```
         sudo apt install ffmpeg
     ```
 
@@ -67,6 +67,6 @@ You need:
 
 # Questions?
 
-make an issue if you have any questions, improvemenets or critic. 
+make an issue if you have any questions, improvemenets or critic.
 have fun :)
-    
+
