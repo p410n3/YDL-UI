@@ -1,8 +1,8 @@
 <?php
 //The default password is "password"
 $authArray = array(
-    "user1"=>"$2y$10$.8WJ5CCa41X.vM6bbtWP8OtqT1NMkbs5n1EgIj86R2SYha9xx79rm",
-    "user2"=>"$2y$10$.8WJ5CCa41X.vM6bbtWP8OtqT1NMkbs5n1EgIj86R2SYha9xx79rm",
+    'user1'=>'$2y$10$.8WJ5CCa41X.vM6bbtWP8OtqT1NMkbs5n1EgIj86R2SYha9xx79rm',
+    'user2'=>'$2y$10$.8WJ5CCa41X.vM6bbtWP8OtqT1NMkbs5n1EgIj86R2SYha9xx79rm',
 );
 
 //Delete old folders after x hours
