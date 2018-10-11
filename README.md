@@ -2,7 +2,7 @@
 
 Minimalistic, portable and selfhosted Interface for the famous [youtube-dl](https://rg3.github.io/youtube-dl/) CLI tool.
 
-### IF YOU WANT SOMETHING ADDED, WRITE IT DOWN HERE: https://github.com/p410n3/YDL-UI/issues/12
+### IF YOU WANT SOMETHING ADDED, WRITE IT DOWN HERE: [Tasklist](https://github.com/p410n3/YDL-UI/issues/12)
 
 ![GIF](https://i.imgur.com/f3uKMON.gif)
 
