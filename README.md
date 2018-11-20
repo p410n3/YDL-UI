@@ -1,5 +1,7 @@
 # YDL-UI
 
+# WARNING: Due to my recent studies regarding XSS, I have a suspicion that this is vulnerable! It only regards logged in Users but still, that is not to be dismissed. I am not 100% sure and hove no free time right now to check thid. Be careful!
+
 Minimalistic, portable and selfhosted Interface for the famous [youtube-dl](https://rg3.github.io/youtube-dl/) CLI tool.
 
 ### IF YOU WANT SOMETHING ADDED, WRITE IT DOWN HERE: [Tasklist](https://github.com/p410n3/YDL-UI/issues/12)
