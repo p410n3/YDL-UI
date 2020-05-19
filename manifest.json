@@ -1,0 +1,6 @@
+{
+  "name": "YDL-UI",
+  "start_url": "index.php",
+  "display": "standalone",
+  "orientation": "any"
+}
