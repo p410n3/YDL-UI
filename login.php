@@ -3,11 +3,11 @@ session_start();
 
 include "config.php";
 
-if (isset($_POST['user']) && isset($_POST['pass'])) {
+if (isset($_REQUEST['user']) && isset($_REQUEST['pass'])) {
 
     foreach($authArray as $x => $x_value) {
-        if ($x == $_POST['user']) {
-            if (password_verify($_POST['pass'], $x_value)) {
+        if ($x == $_REQUEST['user']) {
+            if (password_verify($_REQUEST['pass'], $x_value)) {
                 $_SESSION['login'] = true;
                 $_SESSION['user'] = $x;
                 header("Location: index.php");
